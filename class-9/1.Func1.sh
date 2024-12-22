@@ -2,6 +2,7 @@
 
 function func1 {
     echo " This is Function-1" 
+    func2
 }
 
 func2() { 
