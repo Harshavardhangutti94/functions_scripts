@@ -9,4 +9,8 @@ Get_vpc() {
     done
 }
 
-Get_vpc us-east-1
+for region in $@; do 
+    Get_vpc ${region}
+    done 
+
+Get_vpc 
