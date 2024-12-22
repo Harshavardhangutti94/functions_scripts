@@ -6,5 +6,6 @@ Get_vpc() {
     for i in ${get_vpc}; do 
         echo "The vpcId is $i"
         echo "====================="
+    done
 }
 
