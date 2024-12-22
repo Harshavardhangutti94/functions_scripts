@@ -8,3 +8,6 @@ func2() {
     echo " This is Function-2" 
 }
 
+
+func1 
+func2
