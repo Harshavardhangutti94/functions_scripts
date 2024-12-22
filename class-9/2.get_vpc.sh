@@ -9,3 +9,4 @@ Get_vpc() {
     done
 }
 
+Get_vpc us-east-1
