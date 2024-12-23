@@ -13,4 +13,3 @@ for region in $@; do
     Get_vpc ${region}
     done 
 
-Get_vpc 
