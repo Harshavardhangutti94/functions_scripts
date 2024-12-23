@@ -6,10 +6,7 @@ copy_key_pair() {
    echo "Key Pair Copied to Region:${region}"
    }
    
-regions=$(aws ec2 describe-regions | jq ".Regions[].RegionaName" -r)
-for region in ${regions}; do 
-if [ ${region} == 'us-east-1' ]; then 
-   copy_key_pair ${key_name} 
-fi
+for regon in us-east-1 us-west-1 us-west-2; do
+    copy_key_pair $1 ${region}
 done 
  
