@@ -9,5 +9,6 @@ regions=$(aws ec2 describe-regions | jq ".Regions[].RegionName" -r)
 for region in ${regions}; do 
 if [ ${region} == 'us-east-1' ]; then
     copy_key_pair $1 
+fi
 done 
  
