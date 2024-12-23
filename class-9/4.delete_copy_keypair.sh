@@ -1,11 +1,14 @@
 #!/bin/bash 
 
-pub_key=$(echo $1)
-key_name=$2
+pub_key=$(echo $2)
+key_name=$1
 copy_key_pair() { 
-   aws ec2 import-key-pair --key-name $2 --public-key-material ${pub_key}  --region ${region} }
+   aws ec2 import-key-pair --key-name $1 --public-key-material ${pub_key}  --region ${region} 
+   }
    
-for region in $@; do 
-copy_key_pair ${region} 
+regions=$(aws ec2 describe-regions | jq ".Regions.[].RegionaName" -r)
+for region in ${regions}; do 
+if [ ${region} == 'us-east-1' ]; then 
+   c0py_key_pair ${region} 
 done 
  
