@@ -3,6 +3,7 @@ pub_key=$(echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7cjS7n/roj4+Vd4w4BGxrbvHP
 key_name=$1
 copy_key_pair() { 
    aws ec2 import-key-pair --key-name $1 --public-key-material ${pub_key} --region ${region} 
+   echo "Key Pair Copied to Region:${region}"
    }
    
 regions=$(aws ec2 describe-regions | jq ".Regions[].RegionaName" -r)
