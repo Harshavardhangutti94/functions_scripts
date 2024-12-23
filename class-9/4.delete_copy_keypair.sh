@@ -1,5 +1,5 @@
 #!/bin/bash 
-pub_key=$(echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7cjS7n/roj4+Vd4w4BGxrbvHP5OkWG1KEQxvxAvTo/gB8M9Ckem/OSacOuEqrkitM/aWVBhL7XD8tGaAZMemKk+8GND21XBKQyh5DTA7XT7K9wov9JXNFT8waj0w1l+KnCJjqDlHffjn/5vrJX3JJPTsfrOFw9upTYixvO5t7esgINDLhKmShS5mBR7lPIr3wBEkXhZ6a+PyYoA8E/csj0rNQSbLQQZ7QFrVprjQFxRY3gRbItomLZQQCfG0s5Ci0jaTt7hMjzReqARVpnaz2sew6Njn1TcoswD/I06NrSOTqlcUPKkaoU8oHt7ToKM9siA3bU29gTAQunSUxF+ch')
+pub_key=$(echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYGTIk35MAjHJkDffOZaXuikCZBzIva5uB5FXm+3CMSD4zuzCQjpgnrbAx2JuU6hdHgEUPvUt72xbc1jZ0TFXJT4Q7PG7ocrYLkQDp73aMEi0R6FxGCln5GgWtyYI45vvlGUlnunvMiRHR+rHUFRjcSb9/MGEewS2wMM6hqLbmeLl+lvtVAqgLjIrFEFMUlINsPT6WXx0mbj8u6L3g15iWH0xWA2etu4pkzu3eb0CMXhQs7k/F3bRwccFmh/p3/CHN3jICWbjNkl3r7R276TrbxRDUwlDjfuE3//hj3nC/XVR1HBBOAGyPC1HS0yqOp8jZmVo/J858T20bjsEgqLu9')
 copy_key_pair() { 
    aws ec2 import-key-pair --key-name $1 --public-key-material ${pub_key} --region ${region} 
    echo "Key Pair Copied to Region:${region}"
