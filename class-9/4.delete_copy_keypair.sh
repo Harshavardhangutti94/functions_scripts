@@ -1,5 +1,6 @@
 #!/bin/bash 
 pub_key=$(cat /tmp/file1)
+cat $pub_key
 copy_key_pair() { 
    aws ec2 import-key-pair --key-name $1 --public-key-material ${pub_key} --region ${region} 
    echo "Key Pair Copied to Region:${region}"
