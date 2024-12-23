@@ -8,7 +8,7 @@ for i in ${vol_id}; do
         echo "Valid Volume.." 
     else 
         echo"Invalid volume .... Deleting volume ${i}" 
-        aws ec2 delete-volume --volume-ids ${i}
+        aws ec2 delete-volume --volume-id ${i}
     fi 
     done 
     } 
