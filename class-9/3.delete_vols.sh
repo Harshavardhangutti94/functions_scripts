@@ -7,7 +7,7 @@ for i in ${vol_id}; do
     if [ ${vol_size} -gt 5 -a ${vol_state} == 'in-us' ]; then 
         echo "Valid Volume.." 
     else 
-        echo"Invalid volume .... Deleting volume ${i}" 
+        echo "Invalid volume .... Deleting volume ${i}" 
         aws ec2 delete-volume --volume-id ${i}
     fi 
     done 
