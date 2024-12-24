@@ -1,0 +1,7 @@
+#!/bin/bash 
+str=$1
+length1=$(echo -n $str | wc -c)
+length2=${#str} 
+for i in range(0,$length2); do
+     echo ${STR[@]:$I:1}
+     done

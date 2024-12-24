@@ -1,5 +1,5 @@
 #!/bin/bash
-domain=(www.google.com www.yahoo.con www.facebook.com)
+domain=$@
 if [ $# -gt 0 ]; then 
    for i in $domain; do 
     timeout 3 netcat -zv $i 443 >> /dev/null 2>&1 
