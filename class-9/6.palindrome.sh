@@ -4,6 +4,6 @@ length1=$(echo -n $str | wc -c)
 length2=${#str} 
 for(( i=0; i<$(expr length2); i++ )); do
      b=${str[@]:$i:1}
-     b=$b+" "
+     c=$b+" "
      done
-echo $b
+echo $c
