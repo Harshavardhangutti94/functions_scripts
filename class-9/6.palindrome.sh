@@ -8,4 +8,5 @@ length2=${#str}
 for (( i=($length2-$b); i>=0 ; i--)); do
       rev="$rev${str[@]:$i:1}" 
 done
+echo $rev
 
