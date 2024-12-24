@@ -10,8 +10,8 @@ for (( i=($length2-$b); i>=0 ; i--)); do
 done
 if [ $str == $rev ];
 then 
-    echo "The given string is a palindrome"
+    echo "The given $rev is a palindrome"
 else 
-    echo "The given string is not a palindrome"
+    echo "The given $rev is not a palindrome"
 fi
 
