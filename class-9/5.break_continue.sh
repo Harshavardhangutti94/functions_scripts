@@ -7,6 +7,7 @@ if [ $# -gt 0 ]; then
        echo "$i is up and running"
     else 
        echo "$i id down"
+       continue
     fi 
     done 
 else 
